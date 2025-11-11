@@ -7,13 +7,15 @@ import { FormsModule } from '@angular/forms';
 import { PipesPipe } from './pipes.pipe';
 import { CdDirective } from './cd.directive';
 import { TransferComponent } from './transfer/transfer.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PipesPipe,
     CdDirective,
-    TransferComponent
+    TransferComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
