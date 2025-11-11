@@ -1,0 +1,64 @@
+<h2>I.Data Binding</h2>
+<h4>String Interpolation (Server -> Component)</h4>
+<h6>{{user}}</h6>
+
+<h4>Properity Binding (Server -> Component)</h4>
+<p [innerText]="role">Immam</p>
+<input type="text" [value]="user">
+
+
+<h4>Event Binding (Component -> Server)</h4>
+<button (click)="enter()">Click Me</button>
+
+<h4>Two-way Data Binding (Server -> Component) to (Component -> Server)</h4>
+<input type="text" [(ngModel)]="user">
+
+<h2>II.Directives</h2>
+
+<h4>Structural Directives</h4>
+<p *ngIf="show">Immam</p>
+
+<ul *ngFor="let fruit of fruits">
+  <li>{{fruit}}</li>
+</ul>
+
+<ol [ngSwitch]="color">
+  <li *ngSwitchCase="'green'">im green</li>
+  <li *ngSwitchCase="'red'">im red</li>
+  <li *ngSwitchCase="'blue'">im blue</li>
+  <li *ngSwitchDefault="">Unknown color</li>
+</ol>
+
+<h4>Attribute Directives</h4>
+
+<p [ngClass]="{'active':phone, 'disable':!phone}">Samsung</p>
+
+<p [ngStyle]="{'color': bluecolor,'font-size':size }">Im the Attribute stylee</p>
+
+
+<p appCd>Hover over this text to see the highlight!</p>
+<p>Normal text without highlight.</p>
+
+
+
+
+<h2>III.Pipes</h2>
+
+<p>Original: hello</p>
+<p>1.{{"hello" | uppercase}}</p>
+<p>2.{{"Hello" | lowercase}}</p>
+<p>3.{{today | date:'short' }}</p>
+<p>4.{{12345 | number}}</p>
+<p>5.{{"dfghjdede" | json}}</p>
+<p>6.{{user | reverse}}</p>
+
+
+<h2>IV.Service</h2>
+<p>{{item}}</p>
+<p>{{murder}}</p>
+
+
+
+<h2>V.Component Interaction</h2>
+<h3>{{childmessage}}</h3>
+<app-transfer [message]="read" (outermessage)="fromchild($event)"> </app-transfer>
