@@ -8,6 +8,7 @@ import { PipesPipe } from './pipes.pipe';
 import { CdDirective } from './cd.directive';
 import { TransferComponent } from './transfer/transfer.component';
 import { LoginComponent } from './login/login.component';
+import { LogerComponent } from './loger/loger.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { LoginComponent } from './login/login.component';
     PipesPipe,
     CdDirective,
     TransferComponent,
-    LoginComponent
+    LoginComponent,
+    LogerComponent
   ],
   imports: [
     BrowserModule,
